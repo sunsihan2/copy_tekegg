@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "title": "Product 1",
+    "description": "Product 1 description",
+    "qty": 10,
+    "isAvailable": true
+  },  {
+    "id": 2,
+    "title": "Product 2",
+    "description": "Product 2 description",
+    "qty": 5,
+    "isAvailable": true
+  },  {
+    "id": 3,
+    "title": "Product 3",
+    "description": "Product 3 description",
+    "qty": 3,
+    "isAvailable": true
+  },  {
+    "id": 4,
+    "title": "Product 4",
+    "description": "Product 4 description",
+    "qty": 1,
+    "isAvailable": true
+  }
+]
