@@ -23,16 +23,20 @@ public class ErrorViewTests extends GauntletTest {
 
     @Test(groups={TestSuite.SMOKE})
     public void smoke(){
-        ErrorViewExpected expected = ErrorViewExpected.getInstance();
+        ErrorViewExpected expected = ErrorViewExpected.getInstance("404 Page Not Found");
         ErrorView actual = ErrorView.directNav();
         then(ErrorViewCalibrator.getInstance(expected, actual));
     }
 
     @Test(groups = {TestSuite.RELEASE}, dependsOnMethods = "smoke", dataProvider = "invalidUrlScenarios")
     public void directNavInvalidUrl(String invalidUrl){
-        addRequirements("feature/124-Error-page-no-url");
-        ErrorViewExpected expected = ErrorViewExpected.getInstance();
+        ErrorViewExpected expected = ErrorViewExpected.getInstance("404 Page Not Found");
         ErrorView actual = ErrorView.directNav(invalidUrl);
         then(ErrorViewCalibrator.getInstance(expected, actual));
     }
+
+//    @Test(groups ={TestSuite.})
+//    public void directNavUnhandledException(){
+//
+//    }
 }
